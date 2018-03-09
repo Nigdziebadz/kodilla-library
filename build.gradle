@@ -34,14 +34,20 @@ repositories {
 
 
 dependencies {
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-jdbc')
+	compile('org.springframework.boot:spring-boot-starter-validation')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile group: 'org.projectlombok', name: 'lombok', version: '1.16.18'
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
 
 	//LOCAL_MYSQL
 	compile('mysql:mysql-connector-java')
 
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+    //SWAGER
+    compile('io.springfox:springfox-swagger2:2.7.0')
+    compile('io.springfox:springfox-swagger-ui:2.7.0')
+
+
 
 }

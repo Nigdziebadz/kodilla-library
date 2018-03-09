@@ -1,18 +1,17 @@
 package com.crud.library.repository;
 
+import com.crud.library.domain.Book;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.Reader;
-
 @Component
 @Transactional
-public interface ReaderRepository extends CrudRepository<Reader, Long> {
+public interface BookRepository extends CrudRepository<Book, Long> {
 
-    Reader save(Reader reader);
+    Book save(Book book);
 
-    void deleteById(Long readerId);
+    void deleteById(Long titleId);
 
-    Reader getReaderById(Long readerId);
+    Book getTitleById(Long titleId);
 }
